@@ -4,3 +4,4 @@ pyyaml
 file_read_backwards
 matplotlib
 aiohttp
+schedule
