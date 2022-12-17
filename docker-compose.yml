@@ -1,0 +1,5 @@
+vaersion: 3.9
+services:
+  tg_bot:
+    build: ./
+    restart: always
