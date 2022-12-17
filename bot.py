@@ -1,5 +1,3 @@
-from aiohttp import ClientSession
-import asyncio
 from telebot.async_telebot import AsyncTeleBot, asyncio_filters
 from telebot.types import Message, BotCommand
 from telebot import asyncio_helper
