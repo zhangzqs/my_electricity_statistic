@@ -1,10 +1,9 @@
 import requests
 from config import config
-from dataclasses import dataclass, field
-from datetime import datetime
+from dataclasses import dataclass
 import json
 from file_read_backwards import FileReadBackwards
-from typing import Optional, List, Generator
+from typing import Optional
 import os.path
 
 @dataclass
