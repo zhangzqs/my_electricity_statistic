@@ -81,7 +81,6 @@ def draw_recently_by_cnt(cnt):
     plt.clf()
     xs = list(map(lambda x: f'{x.ts.hour}', logs))
     ys = list(map(lambda x: x.balance, logs))
-    print([xs, ys])
     plt.plot(xs, ys)
 
     plt.show()
