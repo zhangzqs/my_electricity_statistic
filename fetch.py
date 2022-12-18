@@ -77,17 +77,21 @@ def draw_recently_by_cnt(cnt):
     import matplotlib.pyplot as plt
     from io import BytesIO
     
-    logs = list(get_recently_by_cnt(cnt))
+    logs = list(reversed(list(get_recently_by_cnt(cnt))))
     plt.clf()
-    xs = list(map(lambda x: x.ts.hour+x.ts.minute/60, logs))
+    xs = list(map(lambda x: f'{x.ts.hour}', logs))
     ys = list(map(lambda x: x.balance, logs))
+    print([xs, ys])
     plt.plot(xs, ys)
 
+    plt.show()
     buf = BytesIO()
     plt.savefig(buf, format='png')
     buf.seek(0)
     
     return buf
+
+draw_recently_by_cnt(24)
 
 __all__ = [
     'get_last',
